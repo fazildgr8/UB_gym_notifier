@@ -7,8 +7,12 @@ days = ['monday','tuesday','wednesday','thursday','friday']
 weekdays = [12,12,11,12,13]
 notify_endpoint = 'https://notify.run/KQQrnm4IqCuxC6D7'
 url = ''
-for i in range(len(days)):
-    url = url_pre + '-'+ days[i]+str(weekdays[i])
-    event_notifier(url,notify_endpoint,days[i])
+
+def clark_notify_all():
+    for i in range(len(days)):
+        url = url_pre + '-'+ days[i]+str(weekdays[i])
+        event_notifier(url,notify_endpoint,days[i])
+
+
 
 
